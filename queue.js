@@ -40,11 +40,11 @@ class Queue {
 		if (!this.first) {
 			throw new Error("Queue is empty!");
 		}
-
+		let val = this.first.val;
 		this.first = this.first.next;
 		this.size--;
 		if (this.length < 2) this.last = this.first;
-		return this.first.val;
+		return val;
 	}
 
 	/** peek(): return the value of the first node in the queue. */
@@ -53,7 +53,7 @@ class Queue {
 		if (!this.first) {
 			throw new Error("Queue is empty!");
 		}
-		return this.first;
+		return this.first.val;
 	}
 
 	/** isEmpty(): return true if the queue is empty, otherwise false */
